@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/artem/snap/exercism/5/exercism/python/pangram'
+let g:netrw_dirhist_7='/home/artem/snap/exercism/5/exercism/python/robot-name'
+let g:netrw_dirhist_6='/home/artem/snap/exercism/5/exercism/python/pangram'
+let g:netrw_dirhist_5='/home/artem/projects/js/js_bootcamp_2021'
+let g:netrw_dirhist_4='/home/artem/.vim/plugged'
+let g:netrw_dirhist_3='/home/artem/projects/suchov.github.io'
+let g:netrw_dirhist_2='/home/artem/projects/python/cpd'
+let g:netrw_dirhist_1='/home/artem/.vim'
