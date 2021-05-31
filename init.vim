@@ -11,3 +11,4 @@ call plug#end()
 
 " set to show line numbers
 set number
+colorscheme morning
