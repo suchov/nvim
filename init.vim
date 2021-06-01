@@ -6,9 +6,9 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'dracula/vim'
 
 call plug#end()
 
 " set to show line numbers
 set number
-colorscheme morning
