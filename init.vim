@@ -21,6 +21,7 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
 
+" Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " For JS/JSX
