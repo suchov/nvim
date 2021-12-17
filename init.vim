@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 "  semantic highlighting for Python in Neovim
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
@@ -47,6 +48,7 @@ call plug#end()
 
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
+
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -57,7 +59,6 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
-
 " set to show line numbers
 set number
 
@@ -67,6 +68,17 @@ syntax on
 
 " turn off search highlight
 nnoremap ,<space> :nohlsearch<CR>
+
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
+
+" Automaticaly close nvim if NERDTree is only thing left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Toggle NerdTree with Ctrl + b
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
 lua << EOF
 local nvim_lsp = require('lspconfig')
@@ -117,11 +129,3 @@ for _, lsp in ipairs(servers) do
 end
 EOF
 
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Toggle NerdTree with Ctrl + b
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
