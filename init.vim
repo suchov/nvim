@@ -66,7 +66,7 @@ set number
 colorscheme ayu 
 syntax on
 
-" turn off search highlight
+" turn off search highlight on space + ','
 nnoremap ,<space> :nohlsearch<CR>
 
 let g:NERDTreeShowHidden = 1
@@ -80,6 +80,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Toggle NerdTree with Ctrl + b
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
+" config with some help of the Lua
 lua << EOF
 local nvim_lsp = require('lspconfig')
 
