@@ -3,12 +3,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-"  semantic highlighting for Python in Neovim
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-
 " LSP - language service processing + autocomplete
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -21,6 +15,12 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+"  semantic highlighting for Python in Neovim
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
