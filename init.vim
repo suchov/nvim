@@ -130,3 +130,5 @@ for _, lsp in ipairs(servers) do
 end
 EOF
 
+" require lua plugins
+lua require('plugins')
