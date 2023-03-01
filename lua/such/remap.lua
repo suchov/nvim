@@ -1,3 +1,4 @@
-local nnoremap = require("such.keymap").nnoremap
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+
