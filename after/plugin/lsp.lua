@@ -9,10 +9,12 @@ local lsp = require('lsp-zero').preset({
 lsp.nvim_workspace()
 
 -- My config from Primagen
+-- Installed server processors https://github.com/williamboman/nvim-lsp-installer
 lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
+    'marksman',
 })
 
 local cmp = require('cmp')
