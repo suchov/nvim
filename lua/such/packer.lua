@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-
+  -- all of that is connected to the LSP
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v1.x',
