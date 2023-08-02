@@ -10,11 +10,13 @@ lsp.nvim_workspace()
 
 -- My config from Primagen
 -- Installed server processors https://github.com/williamboman/nvim-lsp-installer
+-- wow, new installer is here: https://github.com/williamboman/mason.nvim
 lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
     'marksman',
+    'pylsp',
 })
 
 local cmp = require('cmp')

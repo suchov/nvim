@@ -29,6 +29,9 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   -- all of that is connected to the LSP
   use {
+    "williamboman/mason.nvim"
+    } -- Manson https://github.com/williamboman/mason.nvim
+  use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v1.x',
       requires = {
