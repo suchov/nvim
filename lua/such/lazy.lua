@@ -28,11 +28,10 @@ require("lazy").setup({
         build = ":TSUpdate",
     },
     'nvim-treesitter/playground',
+    'theprimeagen/harpoon',
+    'mbbill/undotree',
+    'tpope/vim-fugitive',
 --[[
-    use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
     -- all of that is connected to the LSP
     -- https://github.com/williamboman/mason.nvim 
     use {"williamboman/mason.nvim"}
