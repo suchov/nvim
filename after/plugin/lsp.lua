@@ -5,6 +5,19 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_servers = false,
 })
 
+-- To get rid of annoying warning 'vim gloval variable is not defined'
+-- But looks like it is not working - not enough global place for it ...
+require'lspconfig'.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+    },
+  },
+}
+
 -- My config from Primagen
 -- Installed server processors https://github.com/williamboman/nvim-lsp-installer
 -- wow, new installer is here: https://github.com/williamboman/mason.nvim
