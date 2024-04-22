@@ -12,9 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    'neovim/nvim-lspconfig',
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
     'folke/tokyonight.nvim',
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
+    'neovim/nvim-lspconfig',
     {
         'rose-pine/neovim',
         name = 'rose-pine',
@@ -27,6 +31,7 @@ require("lazy").setup({
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
     },
+    'theprimeagen/harpoon',
     'nvim-treesitter/playground',
     'theprimeagen/harpoon',
     'mbbill/undotree',
@@ -36,7 +41,6 @@ require("lazy").setup({
     -- https://github.com/williamboman/mason.nvim 
     use {"williamboman/mason.nvim"}
     use {
-        'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
         requires = {
             -- LSP Support
