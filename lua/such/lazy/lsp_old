@@ -66,3 +66,53 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+    'neovim/nvim-lspconfig',
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    'folke/tokyonight.nvim',
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope.nvim',
+    'neovim/nvim-lspconfig',
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine',
+        config = function()
+            require("rose-pine").setup()
+            vim.cmd('colorscheme rose-pine')
+        end
+    },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
+    },
+    'theprimeagen/harpoon',
+    'nvim-treesitter/playground',
+    'theprimeagen/harpoon',
+    'mbbill/undotree',
+    'tpope/vim-fugitive',
+--[[
+    -- all of that is connected to the LSP
+    -- https://github.com/williamboman/mason.nvim 
+    use {"williamboman/mason.nvim"}
+    use {
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},         -- Required
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
+            {'hrsh7th/cmp-buffer'},       -- Optional
+            {'hrsh7th/cmp-path'},         -- Optional
+            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},             -- Required
+            {'rafamadriz/friendly-snippets'}, -- Optional
+        }
+    }
+    --]]
